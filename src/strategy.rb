@@ -33,3 +33,10 @@ class CheffSalary
     base * FACTOR
   end
 end
+
+class SecondCheffSalary
+  FACTOR = 1.6
+  def retrieve(base)
+    base * FACTOR
+  end
+end
