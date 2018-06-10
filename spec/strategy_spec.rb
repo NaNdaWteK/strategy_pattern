@@ -24,4 +24,13 @@ describe 'Boss' do
 
     expect(cooker.retrieve_salary).to eq(2000)
   end
+
+  it 'cooker assistants salary evolution' do
+    cooker = Staff.new('Nacho')
+    cooker.set_payment_strategy(CookerAssistantSalary.new)
+    expect(cooker.retrieve_salary).to eq(1000)
+
+    cooker.set_payment_strategy(CookerSalary.new)
+    expect(cooker.retrieve_salary).to eq(1300)
+  end
 end
